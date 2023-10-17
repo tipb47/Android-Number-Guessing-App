@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MenuFragment">
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/welcomeText"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="0dp"
+                android:textSize="30sp"
+                android:text="@string/welcome_to_the_game"
+                android:layout_margin="5dp"
+                android:gravity="center" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:orientation="horizontal"
+                android:layout_weight="4" >
+
+
+                <Button
+                    android:id="@+id/playGameButton"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:textSize="35sp"
+                    android:background="@drawable/menubutton"
+                    android:text="@string/play_game"
+                    android:layout_margin="5dp"
+                    tools:ignore="NestedWeights" />
+
+                <Button
+                    android:id="@+id/highScoreButton"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:textSize="35sp"
+                    android:background="@drawable/menubutton"
+                    android:text="@string/view_high_scores"
+                    android:layout_margin="5dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+</layout>

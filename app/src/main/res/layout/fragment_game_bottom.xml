@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".GameFragmentBottom">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.example.midterm.GameViewModel" />
+    </data>
+
+    <TextView
+        android:layout_marginTop="30sp"
+        android:id="@+id/attemptsText"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textSize="30sp"
+        android:text="@{`Number of attempts: ` + viewModel.attempts}" />
+
+</layout>

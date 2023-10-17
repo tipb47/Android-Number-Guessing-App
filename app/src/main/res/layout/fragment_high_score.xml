@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".HighScoreFragment">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.example.midterm.ScoresViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/noHighScoresTextView"
+            android:layout_height="wrap_content"
+            android:text="@string/no_high_scores"
+            android:textSize="25sp"
+            android:padding="20sp"
+            android:visibility="@{viewModel.scores.isEmpty() ? android.view.View.VISIBLE : android.view.View.GONE}"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="wrap_content" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/high_score_list"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="top"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:spanCount="1" />
+
+        <Button
+            android:id="@+id/goBackButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/go_back"
+            android:textSize="25sp"
+            android:background="@drawable/menubutton"
+            android:onClick="@{() -> viewModel.backToMenu()}"/>
+
+    </LinearLayout>
+
+</layout>
